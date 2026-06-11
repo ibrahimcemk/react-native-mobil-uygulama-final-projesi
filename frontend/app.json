@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Mobile Backend App",
+    "slug": "mbl-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Profil resminizi güncellemek için kameraya erişim gerekiyor.",
+        "NSPhotoLibraryUsageDescription": "Profil resminizi güncellemek için galeri erişimi gerekiyor."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.mblapp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static",
+      "build": {
+        "webpack": {
+          "mode": "production"
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Profil resminizi güncellemek için galeri erişimi gerekiyor.",
+          "cameraPermission": "Profil resminizi güncellemek için kamera erişimi gerekiyor."
+        }
+      ],
+      "expo-font",
+      "expo-sharing",
+      "expo-image"
+    ]
+  }
+}
