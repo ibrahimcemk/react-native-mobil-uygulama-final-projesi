@@ -176,7 +176,7 @@ mbl-prj/
 ```env
 MONGODB_URL=mongodb://localhost:27017
 DATABASE_NAME=mbl_db
-SECRET_KEY=your-secret-key-change-in-production
+SECRET_KEY=sizin-gizli-sifreniz
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 API_PREFIX=/api
