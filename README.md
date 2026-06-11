@@ -2,9 +2,6 @@
 
 Freelancer ve müşteriler için modern bir mobil uygulama platformu. Proje yönetimi, teklif verme, değerlendirme sistemi, mesajlaşma ve günlük fotoğraf galerisi özelliklerini içerir.
 
-[![Deploy to GitHub Pages](https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi/actions/workflows/deploy.yml/badge.svg)](https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi/actions/workflows/deploy.yml)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue)](https://ibrahimcemk.github.io/react-native-mobil-uygulama-final-projesi/)
-
 ## 📋 Proje Hakkında
 
 Bu platform, freelancerların projeleri bulmasını, teklif vermesini ve müşterilerle iletişim kurmasını sağlayan kapsamlı bir çözümdür. React Native (Expo) ile geliştirilmiş mobil frontend ve FastAPI tabanlı backend mimarisine sahiptir.
@@ -275,25 +272,6 @@ Bu proje kişisel kullanım için geliştirilmiştir.
 3. Commit yapın (`git commit -m 'Add some AmazingFeature'`)
 4. Branch'i push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request açın
-
-## 🌐 GitHub Pages Deployment
-
-Bu proje GitHub Pages üzerinde otomatik olarak deploy edilir. Her `main` branch'ine push yapıldığında:
-
-1. GitHub Actions workflow tetiklenir
-2. Expo web build oluşturulur
-3. `frontend/dist/` klasörü GitHub Pages'a deploy edilir
-
-### İlk Kurulum İçin:
-
-1. GitHub reposunda **Settings** > **Pages**'e gidin
-2. **Source** olarak **GitHub Actions**'ı seçin
-3. Kodu push edin, otomatik deploy başlayacaktır
-
-### Web Versiyonu:
-
-Uygulamanın web versiyonu şu adrede erişilebilir:
-**https://ibrahimcemk.github.io/react-native-mobil-uygulama-final-projesi/**
 
 ## 🌐 Production Deployment (Render)
 
