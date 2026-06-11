@@ -273,7 +273,40 @@ Bu proje kişisel kullanım için geliştirilmiştir.
 4. Branch'i push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request açın
 
-## 📱 Mobil Uygulama Çalıştırma
+## � GitHub'da Çalıştırma (Codespaces)
+
+Bu projeyi GitHub'da direkt çalıştırmak için GitHub Codespaces kullanabilirsiniz:
+
+1. **GitHub reposunu açın:** https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi
+
+2. **Codespaces oluştur:**
+   - Yeşil "Code" butonuna tıklayın
+   - "Codespaces" sekmesine gidin
+   - "Create codespace on main" butonuna tıklayın
+
+3. **Otomatik kurulum:**
+   - Container otomatik olarak oluşturulacak
+   - Backend ve frontend bağımlılıkları otomatik yüklenecek
+   - MongoDB container başlatılacak
+
+4. **Uygulamayı başlatın:**
+   ```bash
+   # Terminal 1 - Backend
+   cd backend
+   source venv/bin/activate
+   uvicorn app.main:app --reload
+
+   # Terminal 2 - Frontend
+   cd frontend
+   npm start
+   ```
+
+5. **Port forward:**
+   - Backend: Port 8000
+   - Frontend: Port 19000-19002
+   - Portlar otomatik olarak forward edilecek
+
+## �📱 Mobil Uygulama Çalıştırma
 
 Bu proje Expo ile geliştirilmiştir. Mobil cihazda çalıştırmak için:
 
