@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Platform - Mobile App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .setup-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .setup-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .step {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .step h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .code-block code {
+            background: transparent;
+            color: #f8f8f2;
+            padding: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+        }
+
+        .tech-stack {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .qr-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Freelance Platform</h1>
+            <p>Freelancer ve müşteriler için modern, mobil-first uygulama platformu. Proje yönetimi, teklif verme ve daha fazlası.</p>
+            <div style="margin-top: 30px;">
+                <a href="https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi" class="btn">GitHub Repo</a>
+                <a href="#setup" class="btn">Nasıl Çalıştırılır</a>
+            </div>
+        </header>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>📱 Mobil Uygulama</h3>
+                <p>React Native ve Expo ile geliştirilmiş, hem Android hem iOS'ta çalışan native deneyim.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ FastAPI Backend</h3>
+                <p>Yüksek performanslı FastAPI backend, MongoDB veritabanı ile güçlendirilmiş.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Güvenli</h3>
+                <p>JWT token bazlı kimlik doğrulama ve şifrelenmiş veri iletişimi.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💬 Mesajlaşma</h3>
+                <p>Freelancer ve müşteriler arasında gerçek zamanlı mesajlaşma sistemi.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Proje Yönetimi</h3>
+                <p>Proje oluşturma, teklif verme ve kabul etme işlemleri.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⭐ Değerlendirme</h3>
+                <p>Tamamlanan projeler için yıldız ve yorum sistemi.</p>
+            </div>
+        </section>
+
+        <section class="setup-section" id="setup">
+            <h2>🚀 Uygulamayı Çalıştırma</h2>
+            
+            <div class="step">
+                <h3>1. Projeyi Klonlayın</h3>
+                <div class="code-block">
+                    <code>git clone https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi.git<br>cd react-native-mobil-uygulama-final-projesi</code>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>2. Backend'i Başlatın</h3>
+                <p>Windows (PowerShell):</p>
+                <div class="code-block">
+                    <code>cd backend<br>python -m venv venv<br>.\venv\Scripts\activate<br>pip install -r requirements.txt<br>uvicorn app.main:app --reload</code>
+                </div>
+                <p>Linux/Mac:</p>
+                <div class="code-block">
+                    <code>cd backend<br>python3 -m venv venv<br>source venv/bin/activate<br>pip install -r requirements.txt<br>uvicorn app.main:app --reload</code>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>3. Frontend'i Başlatın</h3>
+                <div class="code-block">
+                    <code>cd frontend<br>npm install<br>npm start</code>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>4. Mobil Cihazda Açın</h3>
+                <p>Telefonunuzda <strong>Expo Go</strong> uygulamasını indirin ve terminal'deki QR kodu taratın.</p>
+                <div class="tech-stack">
+                    <span class="badge">Android</span>
+                    <span class="badge">iOS</span>
+                    <span class="badge">Expo Go</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="setup-section">
+            <h2>☁️ GitHub Codespaces ile Çalıştırma</h2>
+            <p>Local kurulum yapmadan tarayıcınızda çalıştırın:</p>
+            <div class="step">
+                <h3>1. GitHub'da Açın</h3>
+                <p>Repo sayfasında <code>Code</code> butonuna tıklayın, <code>Codespaces</code> sekmesinden <code>Create codespace on main</code> seçin.</p>
+            </div>
+            <div class="step">
+                <h3>2. Otomatik Kurulum</h3>
+                <p>Container oluşturulurken backend ve frontend bağımlılıkları otomatik yüklenir. MongoDB container da başlatılır.</p>
+            </div>
+            <div class="step">
+                <h3>3. Uygulamayı Başlatın</h3>
+                <div class="code-block">
+                    <code># Terminal 1<br>cd backend && source venv/bin/activate && uvicorn app.main:app --reload<br><br># Terminal 2<br>cd frontend && npm start</code>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2024 İbrahim Cem Keleş | Freelance Platform</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">React Native + FastAPI + MongoDB</p>
+        </footer>
+    </div>
+</body>
+</html>
