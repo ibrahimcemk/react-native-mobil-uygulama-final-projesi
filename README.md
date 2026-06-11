@@ -2,9 +2,6 @@
 
 Freelancer ve müşteriler için modern bir mobil uygulama platformu. Proje yönetimi, teklif verme, değerlendirme sistemi, mesajlaşma ve günlük fotoğraf galerisi özelliklerini içerir.
 
-[![Deploy to GitHub Pages](https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi/actions/workflows/deploy.yml/badge.svg)](https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi/actions/workflows/deploy.yml)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue)](https://ibrahimcemk.github.io/react-native-mobil-uygulama-final-projesi/)
-
 ## 📋 Proje Hakkında
 
 Bu platform, freelancerların projeleri bulmasını, teklif vermesini ve müşterilerle iletişim kurmasını sağlayan kapsamlı bir çözümdür. React Native (Expo) ile geliştirilmiş mobil frontend ve FastAPI tabanlı backend mimarisine sahiptir.
@@ -121,9 +118,21 @@ cp .env.example .env
 npm start
 ```
 
-4. Tarayıcıda açın veya Expo Go uygulamasını kullanın:
-- Android/iOS: Expo Go uygulamasını indirin ve QR kodu taratın
-- Web: `http://localhost:19006`
+4. Mobil cihazda çalıştırma:
+- **Expo Go (Önerilen):**
+  - Android/iOS: Expo Go uygulamasını indirin
+  - Terminal'de gösterilen QR kodu taratın
+  - Uygulama otomatik olarak açılacak
+
+- **Android Emulator:**
+  ```bash
+  npm run android
+  ```
+
+- **iOS Simulator:**
+  ```bash
+  npm run ios
+  ```
 
 ## 📁 Proje Yapısı
 
@@ -264,25 +273,38 @@ Bu proje kişisel kullanım için geliştirilmiştir.
 4. Branch'i push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request açın
 
-## 🌐 GitHub Pages Deployment
+## 📱 Mobil Uygulama Çalıştırma
 
-Bu proje GitHub Pages üzerinde otomatik olarak deploy edilir. Her `main` branch'ine push yapıldığında:
+Bu proje Expo ile geliştirilmiştir. Mobil cihazda çalıştırmak için:
 
-1. GitHub Actions workflow tetiklenir
-2. Expo web build oluşturulur
-3. `frontend/dist/` klasörü GitHub Pages'a deploy edilir
+### Expo Go ile Çalıştırma (En Kolay)
 
-### İlk Kurulum İçin:
+1. Backend'i başlatın:
+```bash
+cd backend
+uvicorn app.main:app --reload
+```
 
-1. GitHub reposunda **Settings** > **Pages**'e gidin
-2. **Source** olarak **GitHub Actions**'ı seçin
-3. Kodu push edin, otomatik deploy başlayacaktır
+2. Frontend'i başlatın:
+```bash
+cd frontend
+npm start
+```
 
-### Manuel Deploy Test:
+3. Mobil cihazınızda:
+   - Android: Expo Go uygulamasını Google Play'den indirin
+   - iOS: Expo Go uygulamasını App Store'dan indirin
+   - Uygulamayı açın ve terminal'deki QR kodu taratın
+
+### APK Build (Manuel)
+
+APK build oluşturmak için EAS CLI kullanın:
 
 ```bash
 cd frontend
-npm run build:web
+npm install -g eas-cli
+eas build:configure
+eas build --platform android
 ```
 
-Build çıktısı `frontend/dist/` klasöründe oluşacaktır.
+Daha fazla bilgi için: https://docs.expo.dev/build/introduction/
