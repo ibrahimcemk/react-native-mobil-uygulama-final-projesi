@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: mbl-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGODB_URL
+        fromDatabase:
+          name: mbl-mongodb
+          property: connectionString
+      - key: DATABASE_NAME
+        value: mbl_db
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
+      - key: API_PREFIX
+        value: /api
+      - key: PROJECT_NAME
+        value: Mobile Backend API
+      - key: VERSION
+        value: 1.0.0
+      - key: BASE_URL
+        value: https://mbl-backend.onrender.com
+
+databases:
+  - name: mbl-mongodb
+    databaseName: mbl_db
+    user: mbl_user

@@ -273,7 +273,57 @@ Bu proje kişisel kullanım için geliştirilmiştir.
 4. Branch'i push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request açın
 
-## � GitHub'da Çalıştırma (Codespaces)
+## 🌐 Production Deployment (Render)
+
+Bu projeyi production ortamında çalıştırmak için Render kullanabilirsiniz:
+
+### Backend Deployment (Render)
+
+1. **Render hesabı oluşturun:** https://render.com/register
+
+2. **Backend'i deploy edin:**
+   - Render dashboard'da "New +" > "Web Service" seçin
+   - GitHub reposunu bağlayın: `ibrahimcemk/react-native-mobil-uygulama-final-projesi`
+   - Root directory: `backend`
+   - Build command: `pip install -r requirements.txt`
+   - Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - Environment variables ekleyin:
+     - `MONGODB_URL`: Render MongoDB connection string
+     - `DATABASE_NAME`: `mbl_db`
+     - `SECRET_KEY`: Güçlü bir secret key
+     - `ALGORITHM`: `HS256`
+     - `ACCESS_TOKEN_EXPIRE_MINUTES`: `30`
+
+3. **MongoDB Database:**
+   - Render dashboard'da "New +" > "MongoDB" seçin
+   - Connection string'i backend environment variables'a ekleyin
+
+### Frontend Configuration
+
+Production için API URL'yi güncelleyin:
+
+```bash
+cd frontend
+# .env dosyasını düzenleyin
+API_BASE_URL=https://mbl-backend.onrender.com/api
+```
+
+### Mobil Uygulama Çalıştırma (Production)
+
+Backend deploy edildikten sonra:
+
+1. **Frontend'i başlatın:**
+   ```bash
+   cd frontend
+   npm start
+   ```
+
+2. **Mobil cihazda:**
+   - Expo Go uygulamasını indirin
+   - QR kodu taratın
+   - Uygulama production API'ye bağlanacak
+
+## 🚀 GitHub'da Çalıştırma (Codespaces)
 
 Bu projeyi GitHub'da direkt çalıştırmak için GitHub Codespaces kullanabilirsiniz:
 
@@ -290,6 +340,20 @@ Bu projeyi GitHub'da direkt çalıştırmak için GitHub Codespaces kullanabilir
    - MongoDB container başlatılacak
 
 4. **Uygulamayı başlatın:**
+   
+   **Windows (PowerShell):**
+   ```powershell
+   # Terminal 1 - Backend
+   cd backend
+   .\venv\Scripts\activate
+   uvicorn app.main:app --reload
+
+   # Terminal 2 - Frontend
+   cd frontend
+   npm start
+   ```
+
+   **Linux/Mac/Git Bash:**
    ```bash
    # Terminal 1 - Backend
    cd backend
@@ -306,7 +370,7 @@ Bu projeyi GitHub'da direkt çalıştırmak için GitHub Codespaces kullanabilir
    - Frontend: Port 19000-19002
    - Portlar otomatik olarak forward edilecek
 
-## �📱 Mobil Uygulama Çalıştırma
+## �� Mobil Uygulama Çalıştırma
 
 Bu proje Expo ile geliştirilmiştir. Mobil cihazda çalıştırmak için:
 
