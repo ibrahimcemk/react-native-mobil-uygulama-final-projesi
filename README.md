@@ -3,7 +3,7 @@
 Freelancer ve müşteriler için modern bir mobil uygulama platformu. Proje yönetimi, teklif verme, değerlendirme sistemi, mesajlaşma ve günlük fotoğraf galerisi özelliklerini içerir.
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Kurulum%20Sayfası-blue)](https://ibrahimcemk.github.io/react-native-mobil-uygulama-final-projesi/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Reposu-black)](https://github.com/ibrahimcemk/react-native-mobil-uygulama-final-projesi)
 
 ## 📋 Proje Hakkında
 
